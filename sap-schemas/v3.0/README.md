@@ -577,7 +577,9 @@ Constraints:
   - `sap:UserID`
   - `sap:EndOfBusinessDate`
   - `sap:BlockingDate`
+  - `sap:IsBlockedIndicator`
   - `sap:EndOfRetentionDate`
+  - `sap:DataCategoryID`
 
 Constraints:
 
@@ -611,3 +613,31 @@ Constraints:
 
 - OPTIONAL
 - Default: `true`
+
+### `x-sap-dpp-related-data-category-id`
+
+- Type: `Array`
+- Used at: [Schema Object](https://spec.openapis.org/oas/v3.0.3#schema-object)
+- Description: The annotation value is an array of strings, enabling the assignment of multiple data categories to one entity. The strings must adhere to the format of an ORD ID corresponding to the concept name "dataCategory" introduced herein (refer to ORD Specification | Open Resource Discovery).
+
+- Array Item:
+
+  - Type: `String`
+
+Example:
+
+```json
+{
+  "components": {
+    "schemas": {
+      "Product": {
+        "type": "object",
+        "x-sap-dpp-related-data-category-id": [
+          "sap.s4com.dataCategory:SalesOrder",
+          "sap.s4com.dataCategory:PurchaseContract"
+        ]
+      }
+    }
+  }
+}
+```
