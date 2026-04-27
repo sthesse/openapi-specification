@@ -618,7 +618,7 @@ Constraints:
 
 - Type: `Array`
 - Used at: [Schema Object](https://spec.openapis.org/oas/v3.0.3#schema-object)
-- Description: The annotation value is an array of strings, enabling the assignment of multiple data categories to one entity or field. The strings must adhere to the format of an Correlation ID corresponding to the concept name dataCategory in conjunction with an localIdentifier introduced herein (refer to ORD Specification | Open Resource Discovery).
+- Description: The annotation value is an array of strings, enabling the assignment of multiple data categories to one entity or field. Data categories are entities describing a particular set of personal data with a similar usage, meaning, quality, and risk. The strings must adhere to the format of an Correlation ID corresponding to the concept name dataCategory in conjunction with an localIdentifier introduced herein (refer to [ORD Specification | Open Resource Discovery](https://open-resource-discovery.org/spec-v1#correlation-id)).
 
 - Array Item:
 
